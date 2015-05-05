@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+function  javashow(){ 
+ncp.show(); 
+}
+function  javahide(){ 
+ncp.hide();
+}
+function hide(){
+  var div = document.getElementById('div');
+  div.style.display = 'none';
+}
+function show(){
+var div = document.getElementById('div');
+    div.style.display = 'block';
+
+}
+function tip(msg){
+  alert(msg);
+}
+function toast(){
+   ncp.toast('i am msg from js');
+}
+function chat(msg){
+    var result = confirm(msg);
+    if(result)
+    ncp.onResponse('nice to meet you too');
+    else
+    ncp.onResponse('no thanks');
+}
+
+
+
+    </script>
+</head>
+<body>
+
+<br>
+<br>
+<center>
+    <button onclick="javahide()">hide</button>
+    &nbsp
+    &nbsp
+    &nbsp
+    <button onclick="javashow()">show</button>
+    &nbsp
+    &nbsp
+    &nbsp
+    &nbsp
+    <button onclick="toast()">toast</button>
+</center>
+<br>
+<br>
+
+<div id="div" style="position:absolute; background-color:blue;width:100px;height:100px"/>
+
+
+</body>
+</html>
